@@ -30,6 +30,7 @@ Route::middleware(['isAdmin', 'auth'])->group(function () {
     Route::get('/users/edit/{id}', [UserController::class, 'edit'])->name('editUsers');
     Route::put('/users/update/{id}', [UserController::class, 'update'])->name('updateUsers');
     Route::delete('/users/delete/{id}', [UserController::class, 'destroy'])->name('deleteUser');
+    Route::delete('/users/delete/{id}', [UserController::class, 'destroy'])->name('routeCoba');
 });
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
